@@ -26,5 +26,70 @@
     <!-- external css -->
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="sticky">
+      <div class="bg-[#BADEFF]/26 shadow-sm">
+        <nav class="navbar py-4 max-lg:py-3 h-full lg:container lg:mx-auto">
+          <div
+            class="navbar-left flex items-center w-full flex-row-reverse justify-between lg:flex-row lg:justify-start"
+          >
+            <div class="flex-none max-lg:px-4">
+              <a class="flex items-center gap-1 font-semibold text-xl max-lg:text-sm" href="">
+                English<img src="./assets/logo.png" class="w-9 max-lg:w-7" />
+                <span class="font-bangla">জানালা</span>
+              </a>
+            </div>
+
+            <div class="flex-none lg:hidden">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="-1"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-3"
+                >
+                  <a class="btn btn-outline btn-primary"
+                    ><i class="fa-solid fa-circle-question"></i> FAQ</a
+                  >
+                  <a class="btn btn-outline btn-primary"
+                    ><i class="fa-brands fa-leanpub"></i> Learn</a
+                  >
+                  <a class="btn btn-outline btn-primary"
+                    ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout</a
+                  >
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar-right hidden lg:flex gap-4">
+            <a class="btn btn-outline btn-primary"
+              ><i class="fa-solid fa-circle-question"></i> FAQ</a
+            >
+            <a class="btn btn-outline btn-primary"
+              ><i class="fa-brands fa-leanpub"></i> Learn</a
+            >
+            <a class="btn btn-outline btn-primary"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
