@@ -11,7 +11,17 @@ const loadLessonWord = (id) => {
 
   fetch(wordByLessons)
     .then((response) => response.json())
-    .then((words) => displayWordsByLesson(words.data));
+    .then((words) => {
+      // set initial style for all the buttons
+      const allLessonBtn = document.querySelectorAll(".lesson-btn");
+      allLessonBtn.forEach((btn) => btn.classList.add("btn-outline"));
+
+      // set active style on the clicked button
+      const clickedBtn = document.getElementById(`lesson-btn-${id}`);
+      clickedBtn.classList.remove("btn-outline");
+
+      displayWordsByLesson(words.data);
+    });
 };
 
 const displayWordsByLesson = (words) => {
@@ -49,7 +59,7 @@ const displayWordsByLesson = (words) => {
             <h4 class="text-[#18181B] text-[2rem] font-semibold font-bangla">"${wordData.meaning ? wordData.meaning : "অর্থ পাওয়া যায়নি!"} <span class="text-[#00BCFF] font-bold">/</span> ${wordData.pronunciation ? wordData.pronunciation : "উচ্চারণ পাওয়া যায়নি!"}"</h4>
         </div>
         <div class="card-btns flex justify-between">
-            <button class="btn bg-[#1A91FF]/10 h-full text-[#374957] aspect-square text-2xl px-3"><i class="fa-solid fa-circle-info"></i></button>
+            <button class="btn bg-[#1A91FF]/10 h-full text-[#374957] aspect-square text-2xl px-3" onclick="my_modal_5.showModal()"><i class="fa-solid fa-circle-info"></i></button>
             <button class="btn bg-[#1A91FF]/10 h-full text-[#374957] aspect-square text-2xl px-3"><i class="fa-solid fa-volume-high"></i></button>
         </div>
     `;
@@ -66,9 +76,10 @@ const displayLessons = (lessons) => {
   lessons.forEach((lesson) => {
     // create the lesson button element
     const lessonBtn = document.createElement("button");
-    lessonBtn.className = "btn btn-outline btn-primary";
+    lessonBtn.className = "btn btn-outline btn-primary lesson-btn";
     lessonBtn.innerHTML = `<i class="fa-brands fa-leanpub"></i> Lesson - ${lesson.level_no}`;
     lessonBtn.setAttribute("onclick", `loadLessonWord(${lesson.level_no})`);
+    lessonBtn.setAttribute("id", `lesson-btn-${lesson.level_no}`);
 
     // append button elements into the parent
     lessonsContainer.appendChild(lessonBtn);
