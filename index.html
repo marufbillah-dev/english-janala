@@ -34,7 +34,10 @@
             class="navbar-left flex items-center w-full flex-row-reverse justify-between lg:flex-row lg:justify-start"
           >
             <div class="flex-none max-lg:px-4">
-              <a class="flex items-center gap-1 font-semibold text-xl max-lg:text-sm" href="">
+              <a
+                class="flex items-center gap-1 font-semibold text-xl max-lg:text-sm"
+                href=""
+              >
                 English<img src="./assets/logo.png" class="w-9 max-lg:w-7" />
                 <span class="font-bangla">জানালা</span>
               </a>
@@ -60,7 +63,7 @@
                 </div>
                 <ul
                   tabindex="-1"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-3"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow gap-3"
                 >
                   <a class="btn btn-outline btn-primary"
                     ><i class="fa-solid fa-circle-question"></i> FAQ</a
@@ -91,5 +94,31 @@
         </nav>
       </div>
     </header>
+    <main>
+      <!-- hero section -->
+      <section id="hero" class="flex max-lg:pb-12.5 max-lg:flex-col-reverse max-lg:text-center min-h-[90dvh] items-center justify-between container max-sm:max-w-11/12 mx-auto">
+        <!-- hero contents or hero left -->
+        <div class="hero-contents space-y-7 max-w-[728px] flex-1">
+          <div class="heading space-y-6">
+            <h1 class="text[#18181B] text-5xl font-bold"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+            <p class="text[#18181B] text-2xl font-medium font-bangla">
+              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+              আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+              যাবে অন্য একটি Level এ
+            </p>
+          </div>
+          <!-- get started -->
+          <div class="get-started flex flex-col gap-5">
+            <input type="text" placeholder="Enter Your Name" class="input input-md max-lg:w-full outline-[#00BCFF]"/>
+            <input type="text" placeholder="•••••••••••••••" class="input input-md max-lg:w-full outline-[#00BCFF]"/>
+            <a class="btn btn-primary lg:w-fit">Get Started</a>
+          </div>
+        </div>
+        <!-- hero banner -->
+        <div class="hero-banner flex-1 flex justify-end">
+          <img src="./assets/hero-student.png">
+        </div>
+      </section>
+    </main>
   </body>
 </html>
