@@ -24,7 +24,6 @@
   <!-- header / navbar -->
   <header class="sticky top-0 z-10">
     <div class="bg-[#EDF7FF] shadow-sm">
-
       <nav class="navbar py-4 max-lg:py-3 h-full lg:container lg:mx-auto">
         <!-- navbar left -->
         <div class="navbar-left flex items-center w-full flex-row-reverse justify-between lg:flex-row lg:justify-start">
@@ -77,8 +76,7 @@
   </header>
   <main class="container max-sm:max-w-11/12 mx-auto">
     <!-- hero section -->
-    <section id="hero"
-      class="flex max-lg:flex-col-reverse max-lg:text-center items-center justify-between">
+    <section id="hero" class="flex max-lg:flex-col-reverse max-lg:text-center items-center justify-between">
       <!-- hero contents or hero left -->
       <div class="hero-contents space-y-7 max-w-[728px] flex-1">
         <div class="heading space-y-6">
@@ -111,17 +109,23 @@
         <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
       </h2>
       <!-- lesson container -->
-      <div id="lessons-container" class="flex gap-5 justify-center flex-wrap mb-10"></div>
-    
-      <!-- no-lesson selected section -->
-      <section id="no-lesson" class="py-25 bg-[#F8F8F8] rounded-3xl">
-       <h3 class="text-[#79716B] text-[0.875rem] font-normal font-bangla">আপনি এখনো কোন Lesson Select করেননি।</h3>
-      </section>
-  
+      <div id="lessons-container" class="flex gap-5 max-sm:gap-3 justify-center flex-wrap mb-10"></div>
+
       <!-- word container -->
-       <section id="words-for-lessons" class="hidden">
-         <div id="word-container" class="p-7.5 rounded-3xl bg-[#F8F8F8] grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7.5">
-          </div>
+      <section id="words-for-lessons" class="">
+        <div id="word-container"
+          class="p-7.5 rounded-3xl bg-[#F8F8F8] grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7.5">
+        
+        <!-- no-lesson selected section -->
+        <section id="no-lesson" class="py-25 space-y-4 bg-[#F8F8F8] rounded-3xl col-span-full">
+          <h3 class="text-[#79716B] text-[1rem] font-normal font-bangla">
+            আপনি এখনো কোন Lesson Select করেননি।
+          </h3>
+          <h3 class="text-[#292524] text-[2.125rem] font-medium font-bangla">
+            একটি Lesson Select করুন।
+          </h3>
+        </section>
+        </div>
       </section>
     </section>
   </main>
