@@ -181,23 +181,43 @@ const displayLessons = (lessons) => {
 
 loadLessons();
 
+let allWords = [];
+fetch("https://openapi.programming-hero.com/api/words/all")
+  .then((res) => res.json())
+  .then((data) => {
+    allWords = data.data;
+  });
+
 const searchVocabulary = () => {
-  // removes all lesson buttons active styles
+  loadingSpinner(true);
   removeActive();
 
   const searchInputElement = document.getElementById("search-input");
   const searchValue = searchInputElement.value.trim().toLowerCase();
-  console.log(searchValue);
 
-  // fetch all words
-  const allWordsUrl = "https://openapi.programming-hero.com/api/words/all";
-  fetch(allWordsUrl)
-    .then((response) => response.json())
-    .then((allWordsObj) => {
-      const allWords = allWordsObj.data;
-      const filteredWords = allWords.filter((wordObj) =>
-        wordObj.word.toLowerCase().includes(searchValue),
-      );
-      displayWordsByLesson(filteredWords);
-    });
+  const filteredWords = allWords.filter((wordObj) =>
+    wordObj.word.toLowerCase().includes(searchValue),
+  );
+
+  displayWordsByLesson(filteredWords);
+
+  const wordContainer = document.getElementById("word-container");
+
+  if (filteredWords.length === 0) {
+    wordContainer.innerHTML = `
+      <section class="py-18 bg-[#F8F8F8] rounded-3xl col-span-full">
+        <div class="flex flex-col gap-4 items-center justify-center">
+          <img src="./assets/alert-error.png" alt="" class="w-fit" />
+          <p>
+            The word "<b>${searchValue}</b>" not found!
+          </p>
+        </div>
+      </section>
+    `;
+  }
+
+  loadingSpinner(false);
 };
+document
+  .getElementById("search-input")
+  .addEventListener("input", searchVocabulary);

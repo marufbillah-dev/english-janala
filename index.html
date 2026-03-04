@@ -1,212 +1,255 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <title>English Janala | Let's Learn Vocabularies</title>
 
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <title>English Janala | Let's Learn Vocabularies</title>
 
-    <!-- tailwind and daisyui -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- external css -->
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+  <!-- tailwind and daisyui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <body>
-    <!-- header / navbar -->
-    <header class="sticky top-0 z-10">
-      <div class="bg-[#EDF7FF] shadow-sm">
-        <nav class="navbar py-4 max-lg:py-3 h-full lg:container lg:mx-auto">
-          <!-- navbar left -->
-          <div
-            class="navbar-left flex items-center w-full flex-row-reverse justify-between lg:flex-row lg:justify-start"
-          >
-            <div class="flex-none max-lg:px-4">
-              <a
-                class="flex items-center gap-1 font-semibold text-xl max-lg:text-sm"
-                href=""
-              >
-                English<img src="./assets/logo.png" class="w-9 max-lg:w-7" />
-                <span class="font-bangla">জানালা</span>
-              </a>
-            </div>
+  <!-- external css -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-            <!-- dropdown navbar for small devices -->
-            <div class="flex-none lg:hidden">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="-1"
-                  class="menu menu-sm dropdown-content bg-[#EDF7FF] rounded-box z-1 mt-5 w-52 p-2 shadow gap-3"
-                >
-                  <a class="btn btn-outline btn-primary" href="">
-                    <i class="fa-solid fa-circle-question"></i> FAQ
-                  </a>
-                  <a class="btn btn-outline btn-primary" href="#vucabularies">
-                    <i class="fa-brands fa-leanpub"></i> Learn
-                  </a>
-                  <button class="btn btn-outline btn-primary">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
-                  </button>
-                </ul>
+<body>
+  <!-- header / navbar -->
+  <header class="sticky top-0 z-10">
+    <div class="bg-[#EDF7FF] shadow-sm">
+      <nav class="navbar py-4 max-lg:py-3 h-full lg:container lg:mx-auto">
+        <!-- navbar left -->
+        <div class="navbar-left flex items-center w-full flex-row-reverse justify-between lg:flex-row lg:justify-start">
+          <div class="flex-none max-lg:px-4">
+            <a class="flex items-center gap-1 font-semibold text-xl max-lg:text-sm" href="">
+              English<img src="./assets/logo.png" class="w-9 max-lg:w-7" />
+              <span class="font-bangla">জানালা</span>
+            </a>
+          </div>
+
+          <!-- dropdown navbar for small devices -->
+          <div class="flex-none lg:hidden">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
               </div>
+              <ul tabindex="-1"
+                class="menu menu-sm dropdown-content bg-[#EDF7FF] rounded-box z-1 mt-5 w-52 p-2 shadow gap-3">
+                <a class="btn btn-outline btn-primary" href="">
+                  <i class="fa-solid fa-circle-question"></i> FAQ
+                </a>
+                <a class="btn btn-outline btn-primary" href="#vucabularies">
+                  <i class="fa-brands fa-leanpub"></i> Learn
+                </a>
+                <button class="btn btn-outline btn-primary">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                </button>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <!-- navbar right -->
-          <div class="navbar-right hidden lg:flex gap-4">
-            <a class="btn btn-outline btn-primary" href="">
-              <i class="fa-solid fa-circle-question"></i> FAQ
-            </a>
-            <a class="btn btn-outline btn-primary" href="#vucabularies">
-              <i class="fa-brands fa-leanpub"></i> Learn
-            </a>
-            <button class="btn btn-outline btn-primary">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
-            </button>
-          </div>
-        </nav>
+        <!-- navbar right -->
+        <div class="navbar-right hidden lg:flex gap-4">
+          <a class="btn btn-outline btn-primary" href="">
+            <i class="fa-solid fa-circle-question"></i> FAQ
+          </a>
+          <a class="btn btn-outline btn-primary" href="#vucabularies">
+            <i class="fa-brands fa-leanpub"></i> Learn
+          </a>
+          <button class="btn btn-outline btn-primary">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container max-sm:max-w-11/12 mx-auto">
+    <!-- hero section -->
+    <section id="hero" class="flex max-lg:flex-col-reverse max-lg:text-center items-center justify-between">
+      <!-- hero contents or hero left -->
+      <div class="hero-contents space-y-7 max-w-[728px] flex-1">
+        <div class="heading space-y-6">
+          <h1 class="text[#18181B] text-5xl max-sm:text-4xl font-bold">
+            <span class="text-[#00BCFF]">English</span> is Easy!!
+          </h1>
+          <p class="text[#18181B] text-2xl max-sm:text-xl font-medium font-bangla leading-9">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+            যাবে অন্য একটি Level এ
+          </p>
+        </div>
+        <!-- get started -->
+        <div class="get-started flex flex-col gap-5">
+          <input type="text" placeholder="Enter Your Name" class="input input-md max-lg:w-full outline-[#00BCFF]" />
+          <input type="text" placeholder="•••••••••••••••" class="input input-md max-lg:w-full outline-[#00BCFF]" />
+          <button class="btn btn-primary lg:w-fit">Get Started</button>
+        </div>
       </div>
-    </header>
-    <main class="container max-sm:max-w-11/12 mx-auto">
-      <!-- hero section -->
-      <section
-        id="hero"
-        class="flex max-lg:flex-col-reverse max-lg:text-center items-center justify-between"
-      >
-        <!-- hero contents or hero left -->
-        <div class="hero-contents space-y-7 max-w-[728px] flex-1">
-          <div class="heading space-y-6">
-            <h1 class="text[#18181B] text-5xl max-sm:text-4xl font-bold">
-              <span class="text-[#00BCFF]">English</span> is Easy!!
-            </h1>
-            <p
-              class="text[#18181B] text-2xl max-sm:text-xl font-medium font-bangla leading-9"
-            >
-              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
-              আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
-              যাবে অন্য একটি Level এ
-            </p>
-          </div>
-          <!-- get started -->
-          <div class="get-started flex flex-col gap-5">
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              class="input input-md max-lg:w-full outline-[#00BCFF]"
-            />
-            <input
-              type="text"
-              placeholder="•••••••••••••••"
-              class="input input-md max-lg:w-full outline-[#00BCFF]"
-            />
-            <button class="btn btn-primary lg:w-fit">Get Started</button>
-          </div>
+      <!-- hero banner -->
+      <div class="hero-banner flex-1 flex justify-end">
+        <img src="./assets/hero-student.png" />
+      </div>
+    </section>
+
+    <!-- vocabularies section -->
+    <section id="vucabularies" class="max-lg:py-25 py-50 text-center">
+      <!-- section heading -->
+      <h2 class="text-[#18181B] text-4xl max-sm:text-3xl font-bold mb-8">
+        <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+      </h2>
+      <!-- lesson container -->
+      <div id="lessons-container" class="flex gap-5 max-sm:gap-3 justify-center flex-wrap mb-10"></div>
+
+      <!-- search field -->
+      <div class="join mb-10">
+        <div>
+          <label class="input input-primary validator join-item">
+            <input type="email" placeholder="Search Vocabulary" id="search-input" />
+          </label>
         </div>
-        <!-- hero banner -->
-        <div class="hero-banner flex-1 flex justify-end">
-          <img src="./assets/hero-student.png" />
+        <button class="btn btn-primary join-item" onclick="searchVocabulary()">
+          Search
+        </button>
+      </div>
+      <!-- word container -->
+      <section id="words-for-lessons" class="">
+        <div id="word-container"
+          class="p-7.5 rounded-3xl bg-[#F8F8F8] grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7.5">
+          <!-- no-lesson selected section -->
+          <section id="no-lesson" class="py-25 space-y-4 bg-[#F8F8F8] rounded-3xl col-span-full">
+            <h3 class="text-[#79716B] text-[1rem] font-normal font-bangla">
+              আপনি এখনো কোন Lesson Select করেননি।
+            </h3>
+            <h3 class="text-[#292524] text-[2.125rem] font-medium font-bangla">
+              একটি Lesson Select করুন।
+            </h3>
+          </section>
         </div>
       </section>
 
-      <!-- vocabularies section -->
-      <section id="vucabularies" class="max-lg:py-25 py-50 text-center">
-        <!-- section heading -->
-        <h2 class="text-[#18181B] text-4xl max-sm:text-3xl font-bold mb-8">
-          <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
-        </h2>
-        <!-- lesson container -->
-        <div
-          id="lessons-container"
-          class="flex gap-5 max-sm:gap-3 justify-center flex-wrap mb-10"
-        ></div>
-
-        <!-- search field -->
-        <div class="join mb-10">
-          <div>
-            <label class="input input-primary validator join-item">
-              <input
-                type="email"
-                placeholder="Search Vocabulary"
-                id="search-input"
-              />
-            </label>
-          </div>
-          <button class="btn btn-primary join-item" onclick="searchVocabulary()">Search</button>
-        </div>
-        <!-- word container -->
-        <section id="words-for-lessons" class="">
-          <div
-            id="word-container"
-            class="p-7.5 rounded-3xl bg-[#F8F8F8] grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7.5"
-          >
-            <!-- no-lesson selected section -->
-            <section
-              id="no-lesson"
-              class="py-25 space-y-4 bg-[#F8F8F8] rounded-3xl col-span-full"
-            >
-              <h3 class="text-[#79716B] text-[1rem] font-normal font-bangla">
-                আপনি এখনো কোন Lesson Select করেননি।
-              </h3>
-              <h3
-                class="text-[#292524] text-[2.125rem] font-medium font-bangla"
-              >
-                একটি Lesson Select করুন।
-              </h3>
-            </section>
-          </div>
-        </section>
-
-        <section
-          id="spinner"
-          class="py-25 flex items-center justify-center hidden bg-[#F8F8F8] rounded-3xl col-span-full"
-        >
-          <span class="loading loading-spinner text-primary loading-xl"></span>
-        </section>
+      <section id="spinner"
+        class="py-25 flex items-center justify-center hidden bg-[#F8F8F8] rounded-3xl col-span-full">
+        <span class="loading loading-spinner text-primary loading-xl"></span>
       </section>
+    </section>
 
-      <!-- Open the modal using word_details_modal.showModal() method -->
-      <dialog
-        id="word_details_modal"
-        class="modal modal-bottom sm:modal-middle"
-      >
-        <div class="modal-box rounded-xl p-6 max-sm:p-3 max-w-[735px]">
-          <div id="details-container">
+    <section id="faq" class="max-lg:pb-25 pb-50">
+      <h2 class="text[#18181B] text-4xl max-sm:text-3xl font-bold text-center mb-20">
+        <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+      </h2>
+
+      <!-- collapse -->
+      <div class="collapse-container space-y-5">
+        <div tabindex="0" class="collapse collapse-plus bg-base-200 border-base-300 border rounded-2xl">
+          <div class="collapse-title font-medium text-[1rem] text-[#18181B]">
+            1. How can I start learning English on this website?
+          </div>
+          <div class="collapse-content text-[1rem] text-[#62748E]">
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
           </div>
         </div>
-      </dialog>
-    </main>
+        <div tabindex="0" class="collapse collapse-plus bg-base-200 border-base-300 border rounded-2xl">
+          <div class="collapse-title font-medium text-[1rem] text-[#18181B]">
+            2. Is this website free to use?
+          </div>
+          <div class="collapse-content text-[1rem] text-[#62748E]">
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-plus bg-base-200 border-base-300 border rounded-2xl">
+          <div class="collapse-title font-medium text-[1rem] text-[#18181B]">
+            3. Do I need to create an account?
+          </div>
+          <div class="collapse-content text-[1rem] text-[#62748E]">
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-plus bg-base-200 border-base-300 border rounded-2xl">
+          <div class="collapse-title font-medium text-[1rem] text-[#18181B]">
+            4. How can I build my English vocabulary?
+          </div>
+          <div class="collapse-content text-[1rem] text-[#62748E]">
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-plus bg-base-200 border-base-300 border rounded-2xl">
+          <div class="collapse-title font-medium text-[1rem] text-[#18181B]">
+            5. Do you offer certificates for completed courses?
+          </div>
+          <div class="collapse-content text-[1rem] text-[#62748E]">
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="./scripts/index.js"></script>
-  </body>
+    <!-- wordDetails modal -->
+    <dialog id="word_details_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box rounded-xl p-6 max-sm:p-3 max-w-[735px]">
+        <div id="details-container"></div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="py-25 max-sm:py-12.5 bg-[#EDF7FF] border-t border-base-300">
+    <div class="container max-sm:max-w-11/12 mx-auto flex max-sm:flex-col max-sm:gap-10 max-sm:items-center max-sm:text-center justify-between items-end">
+      <div class="footer-left">
+        <div class="flex-none max-lg:px-4 mb-5">
+          <a class="flex items-center max-sm:justify-center gap-1 font-semibold text-xl max-lg:text-sm" href="">
+            English<img src="./assets/logo.png" class="w-9 max-lg:w-7" />
+            <span class="font-bangla">জানালা</span>
+          </a>
+        </div>
+        <h3 class="text-[#546A7F] text-[1.25rem] font-medium font-bangla mb-2">
+          ইংরেজি শিখুন সহজে
+        </h3>
+        <p class="text-[#546A7F] text-[1rem]">
+          Developed by <span class="font-semibold">Maruf Billah</span> &copy;
+          2026
+        </p>
+      </div>
+      <div class="footer-right">
+        <p class="text-[#546A7F] text-[0.875rem] mb-2">Follow me</p>
+        <div class="social-icons">
+          <a href="" class="text-2xl">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="" class="text-2xl">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="" class="text-2xl">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="" class="text-2xl">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./scripts/index.js"></script>
+</body>
+
 </html>
