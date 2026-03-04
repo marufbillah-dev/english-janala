@@ -173,61 +173,53 @@
             </section>
           </div>
         </section>
+
+        <section id="spinner" class="py-25 flex items-center justify-center hidden">
+          <span class="loading loading-spinner text-primary"></span>
+        </section>
       </section>
 
-      <!-- Open the modal using ID.showModal() method -->
-      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <!-- Open the modal using word_details_modal.showModal() method -->
+      <dialog
+        id="word_details_modal"
+        class="modal modal-bottom sm:modal-middle"
+      >
         <div class="modal-box rounded-xl p-6 max-sm:p-3 max-w-[735px]">
-          <div
-            class="space-y-8 *:space-y-2.5 rounded-xl border border-[#EDF7FF] p-6 max-sm:p-3"
-          >
-            <div class="word">
-              <h3 class="text-4xl font-semibold">
-                Eager (<i class="fa-solid fa-microphone"></i> : ইগার )
-              </h3>
-            </div>
-            <div class="meaning">
-              <h4 class="text-2xl font-semibold">Meaning</h4>
-              <p class="font-bangla text-2xl font-medium">আগ্রহী</p>
-            </div>
-            <div class="example">
-              <h4 class="text-2xl font-semibold">Example</h4>
-              <p class="text-2xl font-normal">
-                The kids were eager to open their gifts.
-              </p>
-            </div>
-            <div class="synonym">
-              <h4 class="text-2xl font-semibold font-bangla">
-                সমার্থক শব্দ গুলো
-              </h4>
-              <div class="synonym-word flex gap-4.5 flex-wrap">
-                <p
-                  class="text-[1.25rem] font-normal bg-[#EDF7FF] rounded-lg px-5 py-1.5 w-fit"
-                >
-                  Enthusiastic
-                </p>
-                <p
-                  class="text-[1.25rem] font-normal bg-[#EDF7FF] rounded-lg px-5 py-1.5 w-fit"
-                >
-                  Enthusiastic
-                </p>
-                <p
-                  class="text-[1.25rem] font-normal bg-[#EDF7FF] rounded-lg px-5 py-1.5 w-fit"
-                >
-                  Enthusiastic
+          <div id="details-container">
+            <div
+              class="space-y-8 *:space-y-2.5 rounded-xl border border-[#EDF7FF] p-6 max-sm:p-3"
+            >
+              <div class="word">
+                <h3 class="text-4xl font-semibold">
+                  Eager (<i class="fa-solid fa-microphone"></i> : ইগার )
+                </h3>
+              </div>
+              <div class="meaning">
+                <h4 class="text-2xl font-semibold">Meaning</h4>
+                <p class="font-bangla text-2xl font-medium">আগ্রহী</p>
+              </div>
+              <div class="example">
+                <h4 class="text-2xl font-semibold">Example</h4>
+                <p class="text-2xl font-normal">
+                  The kids were eager to open their gifts.
                 </p>
               </div>
+              <div class="synonym">
+                <h4 class="text-2xl font-semibold font-bangla">
+                  সমার্থক শব্দ গুলো
+                </h4>
+                <div id="synonym-container"></div>
+              </div>
             </div>
-          </div>
-          <div class="modal-action justify-start">
-            <form method="dialog">
-              <!-- if there is a button in form, it will close the modal -->
-              <button
-                class="btn btn-primary text-2xl font-normal text-white h-full px-9 py-1.5 rounded-xl font-bangla"
-              >
-                Complete Learning
-              </button>
-            </form>
+            <div class="modal-action justify-start">
+              <form method="dialog">
+                <button
+                  class="btn btn-primary text-2xl font-normal text-white h-full px-9 py-1.5 rounded-xl font-bangla"
+                >
+                  Complete Learning
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </dialog>
