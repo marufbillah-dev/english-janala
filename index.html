@@ -151,6 +151,19 @@
           class="flex gap-5 max-sm:gap-3 justify-center flex-wrap mb-10"
         ></div>
 
+        <!-- search field -->
+        <div class="join mb-10">
+          <div>
+            <label class="input input-primary validator join-item">
+              <input
+                type="email"
+                placeholder="Search Vocabulary"
+                id="search-input"
+              />
+            </label>
+          </div>
+          <button class="btn btn-primary join-item" onclick="searchVocabulary()">Search</button>
+        </div>
         <!-- word container -->
         <section id="words-for-lessons" class="">
           <div
@@ -174,8 +187,11 @@
           </div>
         </section>
 
-        <section id="spinner" class="py-25 flex items-center justify-center hidden">
-          <span class="loading loading-spinner text-primary"></span>
+        <section
+          id="spinner"
+          class="py-25 flex items-center justify-center hidden bg-[#F8F8F8] rounded-3xl col-span-full"
+        >
+          <span class="loading loading-spinner text-primary loading-xl"></span>
         </section>
       </section>
 
@@ -186,40 +202,6 @@
       >
         <div class="modal-box rounded-xl p-6 max-sm:p-3 max-w-[735px]">
           <div id="details-container">
-            <div
-              class="space-y-8 *:space-y-2.5 rounded-xl border border-[#EDF7FF] p-6 max-sm:p-3"
-            >
-              <div class="word">
-                <h3 class="text-4xl font-semibold">
-                  Eager (<i class="fa-solid fa-microphone"></i> : ইগার )
-                </h3>
-              </div>
-              <div class="meaning">
-                <h4 class="text-2xl font-semibold">Meaning</h4>
-                <p class="font-bangla text-2xl font-medium">আগ্রহী</p>
-              </div>
-              <div class="example">
-                <h4 class="text-2xl font-semibold">Example</h4>
-                <p class="text-2xl font-normal">
-                  The kids were eager to open their gifts.
-                </p>
-              </div>
-              <div class="synonym">
-                <h4 class="text-2xl font-semibold font-bangla">
-                  সমার্থক শব্দ গুলো
-                </h4>
-                <div id="synonym-container"></div>
-              </div>
-            </div>
-            <div class="modal-action justify-start">
-              <form method="dialog">
-                <button
-                  class="btn btn-primary text-2xl font-normal text-white h-full px-9 py-1.5 rounded-xl font-bangla"
-                >
-                  Complete Learning
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </dialog>

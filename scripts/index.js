@@ -11,6 +11,18 @@ const loadingSpinner = (status) => {
   }
 };
 
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
+
+const removeActive = () => {
+  // set initial style for all the buttons
+  const allLessonBtn = document.querySelectorAll(".lesson-btn");
+  allLessonBtn.forEach((btn) => btn.classList.add("btn-outline"));
+};
+
 const loadLessons = () => {
   const allLessonsUrl = "https://openapi.programming-hero.com/api/levels/all";
 
@@ -20,20 +32,20 @@ const loadLessons = () => {
 };
 
 const loadLessonWord = (id) => {
+  // remove all lesson buttons active styles
+  removeActive();
+
+  // set active style on the clicked button
+  const clickedBtn = document.getElementById(`lesson-btn-${id}`);
+  clickedBtn.classList.remove("btn-outline");
+
   loadingSpinner(true);
+
   const wordByLessons = `https://openapi.programming-hero.com/api/level/${id}`;
 
   fetch(wordByLessons)
     .then((response) => response.json())
     .then((words) => {
-      // set initial style for all the buttons
-      const allLessonBtn = document.querySelectorAll(".lesson-btn");
-      allLessonBtn.forEach((btn) => btn.classList.add("btn-outline"));
-
-      // set active style on the clicked button
-      const clickedBtn = document.getElementById(`lesson-btn-${id}`);
-      clickedBtn.classList.remove("btn-outline");
-
       displayWordsByLesson(words.data);
     });
 };
@@ -91,7 +103,7 @@ const displayWordDetails = (wordDetails) => {
             <div class="modal-action justify-start">
               <form method="dialog">
                 <button
-                  class="btn btn-primary text-2xl font-normal text-white h-full px-9 py-1.5 rounded-xl font-bangla"
+                  class="btn btn-primary btn-wide"
                 >
                   Complete Learning
                 </button>
@@ -123,7 +135,7 @@ const displayWordsByLesson = (words) => {
           </div>
         </section>
     `;
-    loadingSpinner(false)
+    loadingSpinner(false);
     return;
   }
 
@@ -140,14 +152,14 @@ const displayWordsByLesson = (words) => {
         </div>
         <div class="card-btns flex justify-between">
             <button class="btn bg-[#1A91FF]/10 h-full text-[#374957] aspect-square text-2xl px-3" onclick="loadWordDetails(${wordData.id})"><i class="fa-solid fa-circle-info"></i></button>
-            <button class="btn bg-[#1A91FF]/10 h-full text-[#374957] aspect-square text-2xl px-3"><i class="fa-solid fa-volume-high"></i></button>
+            <button class="btn bg-[#1A91FF]/10 h-full text-[#374957] aspect-square text-2xl px-3" onclick="pronounceWord('${wordData.word}')"><i class="fa-solid fa-volume-high"></i></button>
         </div>
     `;
 
     // append all the wordCard element into the parent container
     wordContainer.appendChild(wordCard);
   });
-  loadingSpinner(false)
+  loadingSpinner(false);
 };
 
 const displayLessons = (lessons) => {
@@ -168,3 +180,24 @@ const displayLessons = (lessons) => {
 };
 
 loadLessons();
+
+const searchVocabulary = () => {
+  // removes all lesson buttons active styles
+  removeActive();
+
+  const searchInputElement = document.getElementById("search-input");
+  const searchValue = searchInputElement.value.trim().toLowerCase();
+  console.log(searchValue);
+
+  // fetch all words
+  const allWordsUrl = "https://openapi.programming-hero.com/api/words/all";
+  fetch(allWordsUrl)
+    .then((response) => response.json())
+    .then((allWordsObj) => {
+      const allWords = allWordsObj.data;
+      const filteredWords = allWords.filter((wordObj) =>
+        wordObj.word.toLowerCase().includes(searchValue),
+      );
+      displayWordsByLesson(filteredWords);
+    });
+};
